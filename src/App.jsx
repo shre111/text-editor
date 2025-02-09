@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <p className='title'>Tiptap Rich Text Editor</p>
       <TiptapEditor 
-        initialContent={savedContent.json}
+        initialContent={savedContent?.json || {}}
         onUpdate={handleEditorUpdate}
       />
       
