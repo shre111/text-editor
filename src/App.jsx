@@ -26,7 +26,18 @@ function App() {
       
       <div className="content-preview">
         <p className='title'>Editor HTML Output</p>
-        <pre style={{ border: '1px solid #ccc', borderRadius: '4px', minHeight: '100px', padding: '10px' }}>{editorContent?.html || savedContent?.html}</pre>
+        <pre style={{ 
+          border: '1px solid #ccc', 
+          borderRadius: '4px', 
+          minHeight: '100px', 
+          padding: '10px', 
+          whiteSpace: 'pre-wrap',
+          wordBreak: 'break-word',
+          overflowWrap: 'break-word',
+          maxWidth: '100%'
+        }}>
+          {editorContent?.html || savedContent?.html}
+        </pre>
       </div>
     </div>
   )
